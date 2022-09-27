@@ -122,13 +122,16 @@ ul .content li {
 
 
 .banner {
-    width: 100%;
-    height: 20vh;
-    background: url("banner.jpg") no-repeat center;
-    background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background: url("m_banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (min-width: 1000px) {
     .banner {
-        height: 60vh;
+        height: 100vh;
+        background: url("banner.jpg");
     }
 }
