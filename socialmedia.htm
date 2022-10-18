@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media</title>
+    <style>
+        html body {
+            margin: 0;
+            overflow-y: hidden;
+        }
+
+        body {
+            background-color: #E1E6EC;
+            background-image:
+                linear-gradient(-180deg, #E1E6EC 2%, #F0F4F7 96%),
+                radial-gradient(at 50% 100%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.5) 200%);
+            background-blend-mode: normal, color-burn;
+        }
+
+        .canvas {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: row;
+        }
+
+        .media_item {
+            margin: 40px 20px 0px;
+            cursor: pointer;
+        }
+
+        .media_item img {
+            width: 90%;
+        }
+
+        .banner {
+            width: 100%;
+            background: url(assets/banner.jpg)  center fixed;
+            -webkit-background-size: contain;
+            -moz-background-size: contain;
+            -o-background-size: contain;
+            background-size: contain;
+        }
+
+        @media (max-width: 800px) {
+            .media_item img {
+                width: 100%;
+            }
+
+            .flex-container {
+                flex-direction: column;
+            }
+
+            .banner {
+                width: 100%;
+                height: 100vh;
+                background: url(assets/m_banner.jpg) center bottom fixed;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="canvas flex-container">
+            <div class="media_item">
+                <a href="https://www.facebook.com/voslotonline" target="_blank"><img src="assets/FB.png" alt=""></a>
+            </div>
+            <div class="media_item">
+                <a href="https://www.youtube.com/c/VOSLOT" target="_blank"><img src="assets/Youtube.png" alt=""></a>
+            </div>
+            <!-- <div class="media_item">
+            <a href="#" target="_blank"><img src="assets/IG.png" alt=""></a>
+        </div> -->
+        </div>
+</body>
+
+</html>
