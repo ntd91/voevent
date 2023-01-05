@@ -2,70 +2,424 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VOSLOT SocailMedia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        html body {
+        * {
             margin: 0;
-            overflow-y: hidden;
+            padding: 0;
+            font-family: PingFang SC-Medium, PingFang SC;
         }
 
-        body {
-            background-color: #E1E6EC;
-            background-image:
-                linear-gradient(-180deg, #E1E6EC 2%, #F0F4F7 96%),
-                radial-gradient(at 50% 100%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.5) 200%);
-            background-blend-mode: normal, color-burn;
+        * {
+            font-family: fantasy;
         }
 
-        .canvas {
+        .container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background-image: url(assets/banner.jpg);
+        }
+
+        .content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-height: 100vh;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .g-flex_wrap {
+            flex-wrap: wrap;
+        }
+
+        .g-flex_spb {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: .5rem;
+        }
+
+        .g-flex_jcc {
             display: flex;
             justify-content: center;
+        }
+
+        .g-flex_aic {
+            display: flex;
             align-items: center;
-            height: 100vh;
-            flex-direction: row;
         }
 
-        .media_item {
-            margin: 20px 20px 0px;
-            cursor: pointer;
+        .g-flex_1 {
+            flex: 1;
         }
 
-        .media_item img {
+        .title {
+            display: block;
             width: 90%;
+            max-width: 6rem;
+            margin: 0 auto;
+            padding: 0.5rem 0;
+            animation: shake 0.8s infinite ease-in-out;
+
         }
 
-        .banner {
+        .box {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            margin: auto;
+            box-sizing: border-box;
+            background-color: transparent;
+        }
+
+        @media screen and (max-width: 10000px) {
+            .title {
+                width: 66%;
+                padding: 0.54rem 0 0.3rem;
+            }
+
+            .box {
+                padding: .2rem .6rem .2rem;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .box-btn img {
             width: 100%;
-            background: url(assets/banner.jpg)  center fixed;
-            -webkit-background-size: contain;
-            -moz-background-size: contain;
-            -o-background-size: contain;
-            background-size: contain;
         }
 
-        @media (max-width: 800px) {
-            .media_item img {
-                width: 100%;
-            }
+        .box-btn:last-child {
+            margin-right: 0;
+        }
 
-            .flex-container {
-                flex-direction: column;
-            }
+        .zone {
+            margin: auto;
+            font-size: 1.6rem;
+            width: 50%;
+            text-align: right;
+            color: #fff;
+            display: inline-block;
+            position: relative;
+            text-shadow: 1px 1px 1px black;
+            background-color: #000;
+            transform: skew(-20deg);
+        }
 
-            .banner {
-                width: 100%;
-                height: 100vh;
-                background: url(assets/m_banner.jpg) center bottom fixed;
+        hr {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            border: 0;
+            height: 2px;
+            background-image: linear-gradient(to right, #00000000, #8121b2, #ffffffee);
+        }
+
+
+        .fa-brands {
+          padding-top: 5px;
+          font-size: 60px;
+          min-width: 70px;
+          text-align: center;
+          text-decoration: none;
+          margin: 1px 5px;
+          border-radius: 8px;
+        }
+
+        .fb {
+            padding: 8px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: #fff;
+            color: #425b95;
+            border-color: #425b95;
+            border-style: double;
+            border-width: 10px;
+        }
+
+        .yt {
+            padding: 8px;
+            background: #fff;
+            color: #000;
+            border-color: #000;
+            border-style: double;
+            border-width: 10px;
+        }
+
+        .ig {
+            padding: 8px;
+            background: #fff;
+            color: #bb5176;
+            border-color: #bb5176;
+            border-style: double;
+            border-width: 10px;
+        }
+
+        .tg {
+            padding: 8px;
+            background: #fff;
+            color: #448bb9;
+            border-color: #448bb9;
+            border-style: double;
+            border-width: 10px;
+        }
+
+        .aa {
+            display: flex;
+            justify-content: center;
+        }
+
+        .pp {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-width: 320px;
+            max-width: 320px;
+            margin-top: .2rem;
+        }
+
+        @media screen and (min-width: 10000px) {
+            .box-btn {
+                font-size: 0.2rem;
             }
         }
 
+        @media screen and (max-width: 749px) {
+
+            .container {
+                background-image: url(assets/m_banner.jpg);
+                background-size: cover;
+            }
+
+            .box-title {
+                height: 1.5rem;
+            }
+
+            .box-btn-type {
+                flex: 0 01 100%;
+                margin-top: .5rem;
+                margin-right: 0;
+            }
+
+            .zone {
+                font-size: 1.3rem;
+                width: 75%;
+            }
+
+            .pp {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        @keyframes shake {
+            10% {
+                transform: translate(-0.06rem, 0.08rem) rotate(-1.5deg);
+            }
+
+            20% {
+                transform: translate(0.06rem, -0.09rem) rotate(2.5deg);
+            }
+
+            30% {
+                transform: translate(0.09rem, -0.07rem) rotate(-0.5deg);
+            }
+
+            40% {
+                transform: translate(0.06rem, 0.03rem) rotate(-1.5deg);
+            }
+
+            50% {
+                transform: translate(0.08rem, 0.01rem) rotate(-1.5deg);
+            }
+
+            60% {
+                transform: translate(0.06rem, 0.09rem) rotate(-1.5deg);
+            }
+
+            70% {
+                transform: translate(-0.02rem, -0.09rem) rotate(1.5deg);
+            }
+
+            80% {
+                transform: translate(0.06rem, 0.08rem) rotate(0.5deg);
+            }
+
+            90% {
+                transform: translate(0.02rem, 0.08rem) rotate(0.5deg);
+            }
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0);
+            }
+        }
+
+        @keyframes scaleDraw {
+            0% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.1);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            75% {
+                transform: scale(1.1);
+            }
+        }
 
     </style>
 </head>
 
+<body>
+    <div class="container">
+        <img class="container-bg" src="static/picture/slice14.png" alt="" />
+        <div class="content">
+            <div class="box">
+                <div class="g-flex_spb g-flex_aic box-title">
+                    <hr>
+                    <div class="zone">
+                        For Member
+                    </div>
+                </div>
+                <div class="g-flex_spb g-flex_aic g-flex_wrap">
+                    <div class="box-btn box-btn-type">
+                        <a href="https://www.facebook.com/voslotonline" target="_blank" class="aa">
+                            <div class="fb pp">
+                                <span class="fa-brands fa-square-facebook"></span>
+                                <span style="width:230px">VOSLOT Online</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box-btn box-btn-type">
+                        <a href="https://www.facebook.com/voslotreferral" target="_blank" class="aa">
+                            <div class="fb pp">
+                                <span class="fa-brands fa-square-facebook"></span>
+                                <span style="width:230px">VOSLOT Referral Program</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box-btn box-btn-type">
+                        <a href="https://www.youtube.com/c/VOSLOT" target="_blank" class="aa">
+                            <div class="yt pp">
+                                <span class="fa-brands fa-youtube" style="color:red"></span>
+                                <span style="width:230px">YouTube</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box-btn box-btn-type">
+                        <a href="https://www.instagram.com/voslotofficial/" target="_blank" class="aa">
+                            <div class="ig pp">
+                                <span class="fa-brands fa-instagram" style="color:#bb5176"></span>
+                                <span style="width:230px">Instagram</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box-btn box-btn-type">
+                        <a href="https://t.me/voslotCS" target="_blank" class="aa">
+                            <div class="tg pp">
+                                <span class="fa-brands fa-telegram" style="color:#448bb9"></span>
+                                <span style="width:230px">Member CSR</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box-btn box-btn-type" style="visibility: hidden;">
+                        <a href="#" target="_blank" class="aa">
+                            <div class="tg pp">
+                                <span class="fa-brands fa-telegram" style="color:#448bb9"></span>
+                                <span style="width:230px">hidden</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="g-flex_spb g-flex_aic box-title">
+                    <hr>
+                    <div class="zone">
+                        For Agents
+                    </div>
+                </div>
+                <div class="g-flex_spb g-flex_aic g-flex_wrap">
+                    <div class="box-btn box-btn-type">
+                        <a href="https://www.facebook.com/voslotagent" target="_blank" class="aa">
+                            <div class="fb pp">
+                                <span class="fa-brands fa-square-facebook"></span>
+                                <span style="width:230px">VOSLOT Agent Help Center</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box-btn box-btn-type">
+                        <a href="https://t.me/VOSLOTagent" target="_blank" class="aa">
+                            <div class="tg pp">
+                                <span class="fa-brands fa-telegram" style="color:#448bb9"></span>
+                                <span style="width:230px">Agent CSR</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box-btn box-btn-type">
+                        <a href="https://t.me/voslotagchannel" target="_blank" class="aa">
+                            <div class="tg pp">
+                                <span class="fa-brands fa-telegram" style="color:#448bb9"></span>
+                                <span style="width:230px">VOSLOT Official Agent Channel</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box-btn box-btn-type">
+                        <a href="https://t.me/agentmaterial" target="_blank" class="aa">
+                            <div class="tg pp">
+                                <span class="fa-brands fa-telegram" style="color:#448bb9"></span>
+                                <span style="width:230px">VOSLOT Agent Material</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</body>
+<script>
+    function setRem() {
+        // 默认使用100px作为基准大小
+        const edges = [600, 750, 820, 1050, 1440, 1920, 10000]
+        const baseSize = 30;
+        const vW = window.innerWidth; // 当前窗口的宽度
+        const idx = edges.findIndex(item => item - vW > 0);
+        const maxIdx = idx == -1 ? edges.length - 1 : idx == 0 ? idx : idx - 1;
+        const baseVal = baseSize / edges[maxIdx];
+        const rem = vW * baseVal; // 以默认比例值乘以当前窗口宽度,得到该宽度下的相应font-size值
+        document.documentElement.style.fontSize = rem + 'px';
+    }
+
+    // 初始化
+    setRem();
+    // 窗口大小变化时重置 rem
+    window.onresize = function () {
+        setRem();
+    };
+</script>
+
+
+
+
+</html>
+
+<!-- 
 <body>
     <div class="banner">
         <div class="canvas flex-container">
@@ -84,4 +438,4 @@
         </div>
 </body>
 
-</html>
+</html> -->
