@@ -124,7 +124,7 @@ ul .content li {
 .banner {
   width: 100%;
   height: 100vh;
-  background: url(m_banner.jpg) no-repeat center center fixed;
+  background: url(m_banner.png) no-repeat center center fixed;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -134,7 +134,7 @@ ul .content li {
     .banner {
       width: 100%;
       height: 100vh;
-      background: url(banner.jpg) no-repeat center bottom fixed;
+      background: url(banner.png) no-repeat center bottom fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
