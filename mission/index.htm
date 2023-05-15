@@ -11,7 +11,6 @@
   <link rel="manifest" href="site.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <title>VOSLOT CLUB</title>
   <style>
     html {
@@ -22,7 +21,7 @@
     #form {
       text-align: center;
       position: relative;
-      margin-top: 20px
+      margin-top: 20px;
     }
 
     #form fieldset {
@@ -32,40 +31,27 @@
       box-sizing: border-box;
       width: 100%;
       margin: 0;
-      padding-bottom: 20px;
-      position: relative
+      padding-bottom: 50px;
+      position: relative;
     }
 
     .finish {
-      text-align: center
+      text-align: center;
     }
 
     #form fieldset:not(:first-of-type) {
-      display: none
+      display: none;
     }
 
-    #form .pre-step {
-      width: 100px;
-      font-weight: bold;
-      color: white;
-      border: 0 none;
-      border-radius: 0px;
-      cursor: pointer;
-      padding: 10px 5px;
-      margin: 10px 5px 10px;
-      float: right
-    }
-
+    .pre-step,
     .next-step {
       width: 100px;
       font-weight: bold;
       color: white;
-      border: 0 none;
-      border-radius: 0px;
       cursor: pointer;
-      padding: 10px 5px;
-      margin: 10px 5px 10px;
-      float: right
+      padding: 10px;
+      margin: 10px;
+      float: right;
     }
 
     .form,
@@ -79,24 +65,24 @@
     }
 
     #form .pre-step:hover {
-      background-color: #000000
+      background-color: #000000;
     }
 
     #form .pre-step:focus {
-      background-color: #000000
+      background-color: #000000;
     }
 
     #form .next-step:hover {
-      background-color: #025E2E
+      background-color: #025E2E;
     }
 
     #form .next-step:focus {
-      background-color: #025E2E
+      background-color: #025E2E;
     }
 
     .text {
       color: #D50001;
-      font-weight: normal
+      font-weight: normal;
     }
 
     #progressbar {
@@ -106,7 +92,7 @@
     }
 
     #progressbar .active {
-      color: #025E2E
+      color: #025E2E;
     }
 
     #progressbar li {
@@ -115,23 +101,23 @@
       width: 25%;
       float: left;
       position: relative;
-      font-weight: 400
+      font-weight: 400;
     }
 
     #progressbar #step1:before {
-      content: "1"
+      content: "1";
     }
 
     #progressbar #step2:before {
-      content: "2"
+      content: "2";
     }
 
     #progressbar #step3:before {
-      content: "3"
+      content: "3";
     }
 
     #progressbar #step4:before {
-      content: "4"
+      content: "4";
     }
 
     #progressbar li:before {
@@ -144,7 +130,7 @@
       background: lightgray;
       border-radius: 50%;
       margin: 0 auto 10px auto;
-      padding: 2px
+      padding: 2px;
     }
 
     #progressbar li:after {
@@ -155,19 +141,14 @@
       position: absolute;
       left: 0;
       top: 25px;
-      z-index: -1
+      z-index: -1;
     }
 
-    #progressbar li.active:before {
-      background: #025E2E
-    }
-
-    #progressbar li.active:after {
-      background: #025E2E
-    }
-
-    #progressbar li.active:after {
-      background: #025E2E
+    #progressbar li.active:before,
+    #progressbar li.active:after,
+    #progressbar li.active:after
+     {
+      background: #025E2E;
     }
 
     h2 {
@@ -187,7 +168,7 @@
     }
 
     .pbar {
-      background-color: #025E2E
+      background-color: #025E2E;
     }
 
     img {
@@ -198,6 +179,7 @@
       max-width: 28rem;
       margin: auto;
     }
+
   </style>
 </head>
 
@@ -229,13 +211,13 @@
           <fieldset>
             <h3> Join VOSLOT CLUB </h3>
             <img src="assets/0.jpg" alt="" />
-            <input type="button" name="next-step" class="next-step" value="Next Step" />
+            <div class="next-step">Next Step</div>
           </fieldset>
           <fieldset>
             <h3> Talking with VOSLOT robot </h3>
             <img src="assets/1.jpg" alt="" />
-            <input type="button" name="next-step" class="next-step" value="Next Step" />
-            <input type="button" name="pre-step" class="pre-step" value="Pre Step" />
+            <div class="next-step">Next Step</div>
+            <div class="pre-step">Pre Step</div>
           </fieldset>
           <fieldset>
             <h3> Bind your voslot account </h3>
@@ -243,18 +225,18 @@
             <h3> Bind your voslot phone </h3>
             <img src="assets/3.jpg" alt="" />
             <h3> Only member can join VOSLOT gaming</h3>
-            <input type="button" name="next-step" class="next-step" value="Final Step" />
-            <input type="button" name="pre-step" class="pre-step" value="Pre Step" />
+            <div class="next-step">Next Step</div>
+            <div class="pre-step">Pre Step</div>
           </fieldset>
           <fieldset>
             <div class="finish">
-              <h3 class="text text-center">
+              <h3 class="text">
                 <h3>Now you can get mission name from subscribe VOSLOT CLUB</h3>
                 <h3>There are three opportunities for each event</h3>
                 <img src="assets/4.jpg" alt="" />
               </h3>
             </div>
-            <input type="button" name="pre-step" class="pre-step" value="Pre Step" />
+            <div class="pre-step">Pre Step</div>
           </fieldset>
         </form>
       </div>
